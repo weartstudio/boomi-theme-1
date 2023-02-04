@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=PT+Sans&display=swap');
+
+:root{
+	--fs-sm: 1rem;
+	--fs-md: 1.5rem;
+	--fs-lg: 2rem;
+	--fs-xl: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+	:root{
+		--fs-sm: 2rem;
+		--fs-md: 2.5rem;
+		--fs-lg: 3.125rem;
+		--fs-xl: 3.7rem;
+	}
+}
+
+$dark: #3F5A53;
+$light: #DBC0AB;
+
+$fs-sm: var(--fs-sm);
+$fs-md: var(--fs-md);
+$fs-lg: var(--fs-lg);
+$fs-xl: var(--fs-xl);
+
+$ff-primary: 'Alex Brush', cursive;
+$ff-secondary: 'PT Sans', sans-serif;
+
+
+@import 'reset';
+@import 'base';
+@import 'blocks';
+
+body{
+	text-align: center;
+	color: $dark;
+	font-family: $ff-primary;
+}
+
+.text-xl{ font-size: $fs-xl; }
+.text-lg{ font-size: $fs-lg; }
+.text-md{ font-size: $fs-md; }
+.text-sm{ font-size: $fs-sm; }
+.text-uppercase{ text-transform: uppercase; }
+
+.dark{ color: $dark; }
+.light{ color: $light; }
+
+.ff-primary{ font-family: $ff-primary; }
+.ff-secondary{ font-family: $ff-secondary; }
+
+.block{
+	margin-top: 12vh;
+	margin-bottom: 12vh;
+}
+
+.mb-1{ margin-bottom: 1rem; }
+.mb-2{ margin-bottom: 2rem; }
