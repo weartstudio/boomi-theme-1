@@ -1,8 +1,8 @@
 export default function ImportantNotes({data}) {
 	return (
-		<div id="important_notes" className="container-md block">
+		<div id="important_notes" className="container container-md">
 			<h3 className="text-xl">{data.subtitle}</h3>
-			<h2 className="text-md light mb-2" style={{margin: "2rem 0"}}>{data.title}</h2>
+			<h2 className="text-md light my-5" style={{margin: "2rem 0"}}>{data.title}</h2>
 			<div className="grid">
 				{data.details.map((item,i)=>(
 					<div key={i}>

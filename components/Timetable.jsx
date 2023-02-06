@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function Timetable({data}) {
 	return (
 		<div id="timetable" className="block">
-			<h2 className="text-md mb-2 light">{data.title}</h2>
+			<h2 className="text-md mb-5 light">{data.title}</h2>
 			<div className="grid">
 				{data.details.map((item,i)=>(
 					<div className="item text-md" key={i}>

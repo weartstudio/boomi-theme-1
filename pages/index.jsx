@@ -6,12 +6,12 @@ import Timetable from "@/components/Timetable"
 import AboutUs from "@/components/AboutUs"
 import HitBack from "@/components/HitBack"
 import Gallery from "@/components/Gallery"
-import text from "./texts"
+import text from "@/helpers/texts"
 
 
 export default function Home() {
   return (
-    <main>
+    <main className="text-center">
       <Hero data={text.hero} />
       <Lead data={text.lead} />
       <Separator />
@@ -24,9 +24,7 @@ export default function Home() {
       <Gallery data={text.gallery} />
 
       <p style={{margin: "2rem 1rem"}}>
-        © Barbi & Áron
-        <br />
-        www.boomi.hu
+        © Barbi & Áron <br /> www.boomi.hu
       </p>
     </main>
   )

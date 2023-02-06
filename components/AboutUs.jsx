@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function AboutUs({data}) {
 	return (
 		<div id="aboutus" className="container-sm block">
-			<h2 className="text-xl mb-2">{data.title}</h2>
+			<h2 className="text-xl mb-5">{data.title}</h2>
 			<div className="grid">
 				<div className="img">
 					<p className="text-sm">{data.name1}</p>

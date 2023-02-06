@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=PT+Sans&display=swap');
 
 :root{
-	--fs-sm: 1rem;
-	--fs-md: 1.5rem;
-	--fs-lg: 2rem;
-	--fs-xl: 2.5rem;
+	--fs-sm: 1.5rem;
+	--fs-md: 1.75rem;
+	--fs-lg: 2.5rem;
+	--fs-xl: 2.75rem;
 }
 
 @media (min-width: 1024px) {
@@ -29,14 +29,36 @@ $ff-primary: 'Alex Brush', cursive;
 $ff-secondary: 'PT Sans', sans-serif;
 
 
-@import 'reset';
+// bs vars
+$font-family-sans-serif: $ff-primary;
+$theme-colors: (
+  "light":      $light,
+  "dark":       $dark
+);
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 5,
+  8: $spacer * 6,
+  9: $spacer * 7,
+  10: $spacer * 8,
+);
+
+@import 'bootstrap/scss/bootstrap.scss';
+
+
 @import 'base';
 @import 'blocks';
 
 body{
-	text-align: center;
 	color: $dark;
-	font-family: $ff-primary;
 }
 
 .text-xl{ font-size: $fs-xl; }
@@ -55,6 +77,3 @@ body{
 	margin-top: 12vh;
 	margin-bottom: 12vh;
 }
-
-.mb-1{ margin-bottom: 1rem; }
-.mb-2{ margin-bottom: 2rem; }
