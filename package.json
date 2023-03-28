@@ -1,5 +1,5 @@
 {
-  "name": "boomi-theme-1",
+  "name": "bmi",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,14 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
     "bootstrap": "^5.2.3",
-    "eslint": "8.33.0",
-    "eslint-config-next": "13.1.6",
-    "next": "13.1.6",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "next": "13.2.4",
     "react": "18.2.0",
-    "react-bootstrap": "^2.7.0",
+    "react-bootstrap": "^2.7.2",
     "react-dom": "18.2.0",
-    "sass": "^1.58.0"
+    "sass": "^1.60.0"
   }
 }

@@ -4,7 +4,7 @@ export default function HitBack({data}) {
 	return (
 		<div id="hitback" className="container-sm block">
 
-			<p className="text-md mb-5" dangerouslySetInnerHTML={{__html:data.title}}></p>
+			<p className="text-md mb-5" dangerouslySetInnerHTML={{__html:data.feedback_title}}></p>
 
 			<Row className="align-items-end g-5" md={3} xs={1}>
 				<Col>

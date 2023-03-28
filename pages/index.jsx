@@ -1,3 +1,4 @@
+import { useState } from "react"
 import Hero from "@/components/Hero"
 import Lead from "@/components/Lead"
 import Separator from "@/components/Separator"
@@ -8,24 +9,35 @@ import HitBack from "@/components/HitBack"
 import Gallery from "@/components/Gallery"
 import text from "@/helpers/texts"
 
+export default function Home({data}) {
 
-export default function Home() {
+
   return (
     <main className="text-center">
-      <Hero data={text.hero} />
-      <Lead data={text.lead} />
+      <Hero data={data.acf} />
+      <Lead data={data.acf} />
       <Separator />
-      <ImportantNotes data={text.important_notes} />
-      <Timetable data={text.timetable} />
-      <AboutUs data={text.about} />
+      <ImportantNotes data={data.acf} />
+      <Timetable data={data.acf} />
+      <AboutUs data={data.acf} />
       <Separator />
-      <HitBack data={text.hitback} />
+      <HitBack data={data.acf} />
       <Separator />
-      <Gallery data={text.gallery} />
+      <Gallery data={data.acf} />
 
       <p style={{margin: "2rem 1rem"}}>
-        © Barbi & Áron <br /> www.boomi.hu
+        © {data.acf.greeny_hero_2} <br /> www.boomi.hu
       </p>
     </main>
   )
+}
+
+export async function getStaticProps() {
+
+  const res = await fetch(`https://${process.env.DOMAIN}/wp-json/wp/v2/pages/${process.env.ID}?_fields=acf`)
+  const data = await res.json()
+
+  return {
+    props: { data },
+  }
 }
