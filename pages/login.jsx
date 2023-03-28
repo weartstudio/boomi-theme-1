@@ -1,7 +1,8 @@
-import React from 'react'
+import { useState } from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
 
 export default function login() {
+	const [pass, setPass] = useState("")
 	return (
 		<>
 			<Container className='py-5 my-5 text-center'>
